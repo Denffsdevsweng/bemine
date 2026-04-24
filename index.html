@@ -198,7 +198,7 @@ canvas#confetti-canvas{position:fixed;inset:0;z-index:200;pointer-events:none;}
 <!-- ══ SCREEN 0: LOCK ══ -->
 <div id="screen-lock">
   <div class="lock-card">
-    <p class="lock-eyebrow"> a secret garden awaits…</p>
+    <p class="lock-eyebrow">a secret garden awaits…</p>
     <svg id="lock-svg" viewBox="0 0 100 110" xmlns="http://www.w3.org/2000/svg" style="width:110px;height:110px;overflow:visible;">
       <defs>
         <linearGradient id="lockGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -227,13 +227,13 @@ canvas#confetti-canvas{position:fixed;inset:0;z-index:200;pointer-events:none;}
       <rect x="46" y="76" width="8" height="14" rx="4"
         fill="rgba(194,78,106,.45)"/>
     </svg>
-    <h2 class="lock-title">Enter our secret 🔑</h2>
+    <h2 class="lock-title">Enter our secret </h2>
     <p class="lock-hint">What's the date we first met?<br><span style="font-size:.9em;opacity:.75">Format: MM-DD-YY</span></p>
     <div class="lock-input-wrap">
       <input class="lock-input" id="lock-input" type="text" maxlength="8" placeholder="MM-DD-YY"
         autocomplete="off" onkeydown="onLockKey(event)" oninput="autoFormatDate(this)"/>
       <button class="lock-btn" onclick="tryUnlock()"> Open</button>
-      <p class="lock-err" id="lock-err">That's not quite right 🥺 try again?</p>
+      <p class="lock-err" id="lock-err">That's not quite right  try again?</p>
     </div>
     <p class="lock-petals-deco"></p>
   </div>
