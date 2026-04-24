@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A Garden Message For You 🌸</title>
+<title>A Garden Message For You</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Dancing+Script:wght@500;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -198,7 +198,7 @@ canvas#confetti-canvas{position:fixed;inset:0;z-index:200;pointer-events:none;}
 <!-- ══ SCREEN 0: LOCK ══ -->
 <div id="screen-lock">
   <div class="lock-card">
-    <p class="lock-eyebrow">🌸 a secret garden awaits…</p>
+    <p class="lock-eyebrow"> a secret garden awaits…</p>
     <svg id="lock-svg" viewBox="0 0 100 110" xmlns="http://www.w3.org/2000/svg" style="width:110px;height:110px;overflow:visible;">
       <defs>
         <linearGradient id="lockGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -232,10 +232,10 @@ canvas#confetti-canvas{position:fixed;inset:0;z-index:200;pointer-events:none;}
     <div class="lock-input-wrap">
       <input class="lock-input" id="lock-input" type="text" maxlength="8" placeholder="MM-DD-YY"
         autocomplete="off" onkeydown="onLockKey(event)" oninput="autoFormatDate(this)"/>
-      <button class="lock-btn" onclick="tryUnlock()">🌷 Open</button>
+      <button class="lock-btn" onclick="tryUnlock()"> Open</button>
       <p class="lock-err" id="lock-err">That's not quite right 🥺 try again?</p>
     </div>
-    <p class="lock-petals-deco">🌸 🌺 🌸</p>
+    <p class="lock-petals-deco"></p>
   </div>
 </div>
 
@@ -346,7 +346,7 @@ canvas#confetti-canvas{position:fixed;inset:0;z-index:200;pointer-events:none;}
 
   <!-- SCREEN 1: BLOOM INTRO -->
   <div id="screen-bloom">
-    <p class="bloom-title">Something special is blooming for you… 🌿</p>
+    <p class="bloom-title">Something special is blooming for you… </p>
     <div class="flower-stage">
       <svg id="bloom-svg" width="200" height="200" viewBox="0 0 200 200">
         <path id="bstem" d="M100 192 Q94 158 100 132" stroke="#7aaa62" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0"/>
@@ -413,14 +413,14 @@ canvas#confetti-canvas{position:fixed;inset:0;z-index:200;pointer-events:none;}
         <ellipse cx="20" cy="32" rx="11" ry="5" fill="#c8e0c0" stroke="#7aaa62" stroke-width=".7" transform="rotate(-28,20,32)" opacity=".85"/>
       </svg>
 
-      <p class="q-eyebrow">for someone very special 🌸</p>
+      <p class="q-eyebrow">for someone very special </p>
       <div class="divider-petals">
-        <span>🌸</span><span>🌺</span><span>🌸</span>
+        <span></span><span></span><span></span>
       </div>
-      <h1 class="q-main">Will you be<br><em>my girlfriend?</em></h1>
+      <h1 class="q-main">Will you be<br><em>my girlfriend Eirenne Kaila De Leon?</em></h1>
       <p class="q-sub">You've made every ordinary day feel like<br>a garden in full bloom. 🌿</p>
       <div class="btn-row">
-        <button class="btn-yes" onclick="onYes()">🌹 Yes, always!</button>
+        <button class="btn-yes" onclick="onYes()"> Yes</button>
       </div>
       <p class="no-msg" id="no-msg"></p>
     </div>
@@ -430,10 +430,10 @@ canvas#confetti-canvas{position:fixed;inset:0;z-index:200;pointer-events:none;}
   <!-- SCREEN 3: YES! -->
   <div id="screen-yes">
     <div class="yes-card">
-      <span class="yes-flowers">🌺🌸🌼</span>
+      <span class="yes-flowers"></span>
       <h1 class="yes-title">She said<br><em>yes!!</em></h1>
-      <p class="yes-sub">The garden just got a whole lot more beautiful.<br>This is officially the best day. 🌸</p>
-      <div class="yes-badge">🌷 Together since <strong id="today-date" style="color:var(--deep);margin-left:4px"></strong></div>
+      <p class="yes-sub">The garden just got a whole lot more beautiful.<br>This is officially the best day. </p>
+      <div class="yes-badge"> Together since <strong id="today-date" style="color:var(--deep);margin-left:4px"></strong></div>
     </div>
   </div>
 
@@ -550,7 +550,7 @@ function transitionToQ(){
 const noBtn=document.getElementById('btn-no');
 const noMsg=document.getElementById('no-msg');
 let noHits=0;
-const taunts=['The flowers said no to "no" 🌸','Even the petals disagree 🌺','Your cursor isn\'t fast enough 😄','404: "No" not found in this garden 🌷','The roses are all voting yes 🌹','Nature always finds a way… to say yes 🍃','The button has stage fright lol','Error: "No" undefined in love.js 💐','Maybe reconsider? 🥺🌸','The whole garden says: just say yes already!'];
+const taunts=['The flowers said no to "no" ','Even the petals disagree ','Your cursor isn\'t fast enough ','404: "No" not found in this garden ','The roses are all voting yes ','Nature always finds a way… to say yes ','The button has stage fright lol','Error: "No" undefined in love.js ','Maybe reconsider? ','The whole garden says: just say yes already!'];
 function posNoBtn(){
   const m=70,bw=noBtn.offsetWidth||100,bh=noBtn.offsetHeight||46;
   noBtn.style.left=(m+Math.random()*(window.innerWidth-bw-m*2))+'px';
