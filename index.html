@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A Garden Message For You 🌸</title>
+<title>A Garden Message For You</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Dancing+Script:wght@500;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -191,33 +191,6 @@ canvas#confetti-canvas{position:fixed;inset:0;z-index:200;pointer-events:none;}
 .lock-err.show{opacity:1;}
 
 .lock-petals-deco{font-size:18px;letter-spacing:6px;opacity:.6;}
-
-/* ── MUSIC BUTTON ── */
-#music-btn{
-  position:fixed;bottom:22px;right:22px;z-index:700;
-  width:48px;height:48px;border-radius:50%;
-  background:rgba(255,252,248,.92);
-  border:1.5px solid rgba(249,184,200,.7);
-  box-shadow:0 4px 20px rgba(200,100,130,.2);
-  font-size:19px;cursor:pointer;
-  display:none;align-items:center;justify-content:center;
-  transition:transform .2s,box-shadow .2s,background .2s;
-  backdrop-filter:blur(8px);
-}
-#music-btn:hover{transform:scale(1.12);box-shadow:0 8px 30px rgba(200,100,130,.32);}
-#music-btn.muted{opacity:.55;}
-#music-ring{
-  position:fixed;bottom:16px;right:16px;z-index:699;
-  width:60px;height:60px;border-radius:50%;
-  border:1.5px solid rgba(249,184,200,.4);
-  pointer-events:none;display:none;
-  animation:musicRing 2.4s ease-in-out infinite;
-}
-@keyframes musicRing{
-  0%{transform:scale(1);opacity:.45}
-  60%{transform:scale(1.28);opacity:0}
-  100%{transform:scale(1);opacity:.45}
-}
 </style>
 </head>
 <body>
@@ -225,7 +198,7 @@ canvas#confetti-canvas{position:fixed;inset:0;z-index:200;pointer-events:none;}
 <!-- ══ SCREEN 0: LOCK ══ -->
 <div id="screen-lock">
   <div class="lock-card">
-    <p class="lock-eyebrow">🌸 a secret garden awaits…</p>
+    <p class="lock-eyebrow"> a secret garden awaits…</p>
     <svg id="lock-svg" viewBox="0 0 100 110" xmlns="http://www.w3.org/2000/svg" style="width:110px;height:110px;overflow:visible;">
       <defs>
         <linearGradient id="lockGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -254,21 +227,17 @@ canvas#confetti-canvas{position:fixed;inset:0;z-index:200;pointer-events:none;}
       <rect x="46" y="76" width="8" height="14" rx="4"
         fill="rgba(194,78,106,.45)"/>
     </svg>
-    <h2 class="lock-title">Enter our secret 🔑</h2>
+    <h2 class="lock-title">Enter our secret </h2>
     <p class="lock-hint">What's the date we first met?<br><span style="font-size:.9em;opacity:.75">Format: MM-DD-YY</span></p>
     <div class="lock-input-wrap">
       <input class="lock-input" id="lock-input" type="text" maxlength="8" placeholder="MM-DD-YY"
         autocomplete="off" onkeydown="onLockKey(event)" oninput="autoFormatDate(this)"/>
-      <button class="lock-btn" onclick="tryUnlock()">🌷 Open</button>
-      <p class="lock-err" id="lock-err">That's not quite right 🥺 try again?</p>
+      <button class="lock-btn" onclick="tryUnlock()"> Open</button>
+      <p class="lock-err" id="lock-err">That's not quite right  try again?</p>
     </div>
-    <p class="lock-petals-deco">🌸 🌺 🌸</p>
+    <p class="lock-petals-deco"></p>
   </div>
 </div>
-
-<!-- Music controls -->
-<button id="music-btn" onclick="toggleMusic()" title="Mute music">🎵</button>
-<div id="music-ring"></div>
 
 <canvas id="petals"></canvas>
 <canvas id="confetti-canvas"></canvas>
@@ -377,7 +346,7 @@ canvas#confetti-canvas{position:fixed;inset:0;z-index:200;pointer-events:none;}
 
   <!-- SCREEN 1: BLOOM INTRO -->
   <div id="screen-bloom">
-    <p class="bloom-title">Something special is blooming for you… 🌿</p>
+    <p class="bloom-title">Something special is blooming for you… </p>
     <div class="flower-stage">
       <svg id="bloom-svg" width="200" height="200" viewBox="0 0 200 200">
         <path id="bstem" d="M100 192 Q94 158 100 132" stroke="#7aaa62" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0"/>
@@ -444,14 +413,14 @@ canvas#confetti-canvas{position:fixed;inset:0;z-index:200;pointer-events:none;}
         <ellipse cx="20" cy="32" rx="11" ry="5" fill="#c8e0c0" stroke="#7aaa62" stroke-width=".7" transform="rotate(-28,20,32)" opacity=".85"/>
       </svg>
 
-      <p class="q-eyebrow">for someone very special 🌸</p>
+      <p class="q-eyebrow">for someone very special</p>
       <div class="divider-petals">
-        <span>🌸</span><span>🌺</span><span>🌸</span>
+        <span></span><span></span><span></span>
       </div>
       <h1 class="q-main">Will you be<br><em>my girlfriend?</em></h1>
-      <p class="q-sub">You've made every ordinary day feel like<br>a garden in full bloom. 🌿</p>
+      <p class="q-sub">You've made every ordinary day feel like<br>a garden in full bloom. </p>
       <div class="btn-row">
-        <button class="btn-yes" onclick="onYes()">🌹 Yes, always!</button>
+        <button class="btn-yes" onclick="onYes()"> Yes</button>
       </div>
       <p class="no-msg" id="no-msg"></p>
     </div>
@@ -461,188 +430,16 @@ canvas#confetti-canvas{position:fixed;inset:0;z-index:200;pointer-events:none;}
   <!-- SCREEN 3: YES! -->
   <div id="screen-yes">
     <div class="yes-card">
-      <span class="yes-flowers">🌺🌸🌼</span>
+      <span class="yes-flowers"></span>
       <h1 class="yes-title">She said<br><em>yes!!</em></h1>
-      <p class="yes-sub">The garden just got a whole lot more beautiful.<br>This is officially the best day. 🌸</p>
-      <div class="yes-badge">🌷 Together since <strong id="today-date" style="color:var(--deep);margin-left:4px"></strong></div>
+      <p class="yes-sub">The garden just got a whole lot more beautiful.<br>This is officially the best day. </p>
+      <div class="yes-badge"> Together since <strong id="today-date" style="color:var(--deep);margin-left:4px"></strong></div>
     </div>
   </div>
 
 </div>
 
 <script>
-// ══ ROMANTIC MUSIC ENGINE ════════════════════════════════════
-let audioCtx = null, masterGain = null, musicMuted = false;
-
-function buildReverb(ctx) {
-  const len = ctx.sampleRate * 2.8;
-  const buf = ctx.createBuffer(2, len, ctx.sampleRate);
-  for (let c = 0; c < 2; c++) {
-    const ch = buf.getChannelData(c);
-    for (let i = 0; i < len; i++)
-      ch[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, 1.8);
-  }
-  const cv = ctx.createConvolver();
-  cv.buffer = buf;
-  return cv;
-}
-
-function playTone(ctx, dest, freq, start, dur, vol=0.22, type='triangle') {
-  const osc = ctx.createOscillator();
-  const g   = ctx.createGain();
-  osc.type = type;
-  osc.frequency.setValueAtTime(freq, start);
-  // Piano-like envelope: fast attack, slow decay
-  g.gain.setValueAtTime(0, start);
-  g.gain.linearRampToValueAtTime(vol, start + 0.018);
-  g.gain.exponentialRampToValueAtTime(vol * 0.55, start + 0.12);
-  g.gain.exponentialRampToValueAtTime(0.0001, start + dur * 0.92);
-  osc.connect(g); g.connect(dest);
-  osc.start(start);
-  osc.stop(start + dur + 0.05);
-}
-
-function startMusic() {
-  audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-
-  masterGain = audioCtx.createGain();
-  masterGain.gain.value = 0.0;
-  masterGain.connect(audioCtx.destination);
-
-  const reverb   = buildReverb(audioCtx);
-  const rvGain   = audioCtx.createGain();
-  rvGain.gain.value = 0.28;
-  reverb.connect(rvGain);
-  rvGain.connect(audioCtx.destination);
-
-  // Fade-in master
-  masterGain.gain.linearRampToValueAtTime(0.22, audioCtx.currentTime + 2.5);
-
-  // ── Note frequencies ──
-  const N = {
-    C3:130.81,D3:146.83,E3:164.81,F3:174.61,G3:196.00,A3:220.00,B3:246.94,
-    C4:261.63,D4:293.66,E4:329.63,F4:349.23,G4:392.00,A4:440.00,B4:493.88,
-    C5:523.25,D5:587.33,E5:659.25,F5:698.46,G5:783.99,A5:880.00,
-  };
-
-  const BPM  = 63;          // slow, romantic waltz
-  const BEAT = 60 / BPM;   // seconds per beat
-  const MEAS = 3 * BEAT;    // 3/4 time — waltz
-
-  // ── Melody: [note|'R', beats] ──
-  const melody = [
-    // Phrase 1 — gentle question
-    ['E4',1],['G4',0.5],['A4',0.5],['B4',1],['A4',1],
-    ['G4',1.5],['E4',0.5],['G4',1],['F4',1],
-    ['E4',2],['R',1],
-    // Phrase 2 — tender answer
-    ['A4',1],['C5',0.5],['B4',0.5],['A4',1],['G4',1],
-    ['F4',1.5],['A4',0.5],['G4',1],['E4',1],
-    ['D4',3],
-    // Phrase 3 — warmth rising
-    ['F4',1],['A4',0.5],['C5',0.5],['D5',1],['C5',1],
-    ['B4',1.5],['G4',0.5],['B4',1],['C5',1],
-    ['A4',2],['R',1],
-    // Phrase 4 — bloom
-    ['C5',1],['E5',0.5],['D5',0.5],['C5',1],['B4',1],
-    ['A4',1.5],['G4',0.5],['A4',1],['F4',1],
-    ['E4',3],
-    // Phrase 5 — return, softer
-    ['G4',1],['E4',0.5],['G4',0.5],['A4',1.5],['G4',0.5],
-    ['F4',1],['A4',0.5],['G4',0.5],['E4',1],['D4',1],
-    ['C4',3],
-    // Phrase 6 — gentle close
-    ['E4',0.5],['G4',0.5],['A4',1],['C5',1.5],['B4',0.5],
-    ['G4',1.5],['F4',0.5],['E4',1],['D4',1],
-    ['C4',2],['R',1],
-  ];
-
-  // ── Chord progression (Am–F–C–G waltz, 1 chord/measure) ──
-  const chords = [
-    ['A2','E3','A3','C4'],  // Am
-    ['F2','C3','F3','A3'],  // F
-    ['C3','G3','C4','E4'],  // C
-    ['G2','D3','G3','B3'],  // G
-    ['A2','E3','A3','C4'],  // Am
-    ['F2','C3','F3','A3'],  // F
-    ['C3','G3','C4','E4'],  // C
-    ['G2','D3','G3','B3'],  // G
-  ];
-
-  function scheduleMelody(startAt) {
-    let t = startAt;
-    melody.forEach(([note, dur]) => {
-      const secs = dur * BEAT;
-      if (note !== 'R' && N[note]) {
-        // Main melody (triangle — piano-like)
-        playTone(audioCtx, masterGain, N[note], t, secs, 0.28, 'triangle');
-        // Sub-octave for warmth (sine)
-        if (N[note] > 280)
-          playTone(audioCtx, masterGain, N[note] / 2, t, secs, 0.08, 'sine');
-        // Reverb send
-        playTone(audioCtx, reverb,      N[note], t, secs, 0.15, 'triangle');
-      }
-      t += secs;
-    });
-    return t; // returns time when melody ends
-  }
-
-  function scheduleChords(startAt, totalBeats) {
-    const totalMeasures = Math.ceil(totalBeats / 3);
-    for (let m = 0; m < totalMeasures; m++) {
-      const chord  = chords[m % chords.length];
-      const mStart = startAt + m * MEAS;
-      // Waltz arpeggio — bass on 1, chord tones on 2 & 3
-      chord.forEach((note, i) => {
-        if (N[note]) {
-          const noteStart = mStart + (i === 0 ? 0 : (i === 1 ? BEAT : 2 * BEAT));
-          const noteDur   = i === 0 ? BEAT * 1.2 : BEAT * 0.8;
-          const vol       = i === 0 ? 0.15 : 0.09;
-          playTone(audioCtx, masterGain, N[note], noteStart, noteDur, vol, 'sine');
-          playTone(audioCtx, reverb,     N[note], noteStart, noteDur, vol * 0.5, 'sine');
-        }
-      });
-    }
-  }
-
-  function loop(startAt) {
-    const totalBeats = melody.reduce((s, [,d]) => s + d, 0);
-    const endAt = scheduleMelody(startAt);
-    scheduleChords(startAt, totalBeats);
-    // Schedule next loop 1s before this one ends
-    const loopIn = (endAt - audioCtx.currentTime - 1) * 1000;
-    setTimeout(() => loop(endAt), Math.max(100, loopIn));
-  }
-
-  loop(audioCtx.currentTime + 0.3);
-
-  // Show music button
-  const btn = document.getElementById('music-btn');
-  const ring = document.getElementById('music-ring');
-  btn.style.display = 'flex';
-  ring.style.display = 'block';
-}
-
-function toggleMusic() {
-  if (!audioCtx) return;
-  musicMuted = !musicMuted;
-  const btn = document.getElementById('music-btn');
-  const ring = document.getElementById('music-ring');
-  if (musicMuted) {
-    masterGain.gain.setTargetAtTime(0, audioCtx.currentTime, 0.4);
-    btn.textContent = '🔇';
-    btn.classList.add('muted');
-    ring.style.animationPlayState = 'paused';
-    ring.style.opacity = '0';
-  } else {
-    masterGain.gain.setTargetAtTime(0.22, audioCtx.currentTime, 0.4);
-    btn.textContent = '🎵';
-    btn.classList.remove('muted');
-    ring.style.animationPlayState = 'running';
-    ring.style.opacity = '';
-  }
-}
-
 // ══ LOCK SCREEN ══════════════════════════════════════════
 const SECRET = '04-14-26';
 
@@ -675,7 +472,6 @@ function tryUnlock(){
     setTimeout(()=>{
       document.getElementById('screen-lock').style.display='none';
       runBloom();
-      startMusic();
     }, 1400);
   } else {
     // Wrong — shake & show error
@@ -754,7 +550,7 @@ function transitionToQ(){
 const noBtn=document.getElementById('btn-no');
 const noMsg=document.getElementById('no-msg');
 let noHits=0;
-const taunts=['The flowers said no to "no" 🌸','Even the petals disagree 🌺','Your cursor isn\'t fast enough 😄','404: "No" not found in this garden 🌷','The roses are all voting yes 🌹','Nature always finds a way… to say yes 🍃','The button has stage fright lol','Error: "No" undefined in love.js 💐','Maybe reconsider? 🥺🌸','The whole garden says: just say yes already!'];
+const taunts=['The flowers said no to "no" ','Even the petals disagree ','Your cursor isn\'t fast enough ','404: "No" not found in this garden ','The roses are all voting yes ','Nature always finds a way… to say yes ','The button has stage fright lol','Error: "No" undefined in love.js ','Maybe reconsider? ','The whole garden says: just say yes already!'];
 function posNoBtn(){
   const m=70,bw=noBtn.offsetWidth||100,bh=noBtn.offsetHeight||46;
   noBtn.style.left=(m+Math.random()*(window.innerWidth-bw-m*2))+'px';
